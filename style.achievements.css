@@ -1,0 +1,302 @@
+/* --- Загальні стилі --- */
+body {
+font-family: "Helvetica Neue", Arial, sans-serif;
+margin: 0;
+background: #fafafa;
+color: #333;
+}
+
+header.mit-header {
+background: #0021A5; /* UF синій */
+color: white;
+padding: 20px 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.mit-logo {
+width: 100px;
+height: auto;
+position: absolute;
+left: 40px;
+}
+
+header .header-title {
+text-align: center;
+}
+
+header .header-title h1 {
+margin: 0;
+font-size: 2rem;
+}
+
+header .header-title p {
+margin: 5px 0 0 0;
+font-size: 1.1rem;
+}
+
+/* --- Бічна навігація --- */
+.year-nav-fixed {
+position: fixed;
+top: 100px;
+left: 0;
+width: 160px;
+background: #fff;
+border-right: 3px solid #FA4616; /* UF оранжевий */
+padding: 20px 10px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+z-index: 1000;
+}
+
+.year-nav-fixed a {
+text-decoration: none;
+padding: 8px 12px;
+background: #FA4616; /* UF оранжевий */
+color: white;
+font-weight: 600;
+border-radius: 6px;
+transition: all 0.3s ease;
+text-align: center;
+}
+
+.year-nav-fixed a:hover {
+transform: scale(1.05);
+}
+
+/* --- Таймлайн --- */
+main.timeline {
+max-width: 900px;
+padding: 40px 20px;
+margin: 0 auto;
+position: relative;
+}
+
+.timeline::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+width: 4px;
+background: #FA4616; /* UF оранжевий */
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* --- Елементи таймлайну --- */
+.timeline-item {
+position: relative;
+margin: 60px 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+/* --- Роки --- */
+.timeline-year {
+font-size: 1.6rem;
+font-weight: bold;
+padding: 4px 12px;
+border-radius: 4px;
+background: #fafafa;
+z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+align-self: flex-start;
+color: #0021A5; /* UF синій */
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+align-self: flex-end;
+color: #0021A5; /* UF синій */
+}
+
+/* --- Контент таймлайну --- */
+.timeline-content {
+background: #fff;
+padding: 20px;
+border-radius: 6px;
+border: 1px solid #ddd;
+box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+width: 70%;
+max-width: 700px;
+text-align: left;
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin: 10px auto;
+position: relative;
+box-sizing: border-box;
+}
+
+/* Кружечки на лінії */
+.timeline-item:nth-child(odd) .timeline-content::before,
+.timeline-item:nth-child(even) .timeline-content::before {
+content: '';
+position: absolute;
+top: 20px;
+width: 14px;
+height: 14px;
+background: #FA4616; /* UF оранжевий */
+border-radius: 50%;
+border: 2px solid #fff;
+box-shadow: 0 0 0 3px #FA4616;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before { left: -36px; }
+.timeline-item:nth-child(even) .timeline-content::before { right: -36px; }
+
+/* --- Фото --- */
+.photo-2023-1 {
+width: 350px;
+height: 300px;
+}
+.photo-2023-2{
+width: 230px;
+height: 300px;
+}
+.photo-2024-1{
+display: block;
+margin: 10px auto;
+width: 400px;
+height: 400px;
+border-radius: 6px;
+}
+.photo-2024-2{
+display: block;
+margin: 10px auto;
+width: 400px;
+height: 500px;
+border-radius: 6px;
+}
+.photo-2024-3{
+display: block;
+margin: 10px auto;
+width: 500px;
+height: 400px;
+border-radius: 6px;
+}
+.photo-2025-1{
+display: block;
+margin: 10px auto;
+width: 400px;
+height: 300px;
+border-radius: 6px;
+}
+.photo-2025-2{
+display: block;
+margin: 10px auto;
+width: 400px;
+height: 450px;
+border-radius: 6px;
+}
+.photo-2025-3 {
+display: block;
+margin: 10px auto;
+width: 400px;
+height: 500px;
+border-radius: 6px;
+}
+/* --- Відео кнопки --- */
+.video-container, .video-container1 {
+text-align: center;
+margin-top: 10px;
+}
+
+.video-container a.button, .video-container1 a.button {
+display: inline-block;
+background-color: #0021A5; /* UF синій */
+color: white;
+padding: 10px 22px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+
+.video-container a.button:hover, .video-container1 a.button:hover {
+transform: translateY(-2px);
+}
+
+/* --- Тексти --- */
+.achievement-text {
+font-size: 1.05rem;
+margin-bottom: 15px;
+line-height: 1.6;
+background: #f7f7f7;
+border-left: 4px solid #FA4616; /* UF оранжевий */
+padding: 20px;
+border-radius: 6px;
+}
+
+.centered-topic {
+text-align: center;
+margin: 30px 0 15px 0;
+color: #0021A5; /* UF синій */
+font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+text-align: center;
+padding: 20px;
+background: #f2f2f2;
+margin-top: 40px;
+font-size: 0.9rem;
+color: #555;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+.mit-logo { display: none; }
+.timeline::before { display: none; }
+.timeline-item { margin: 40px 0; }
+.timeline-year { align-self: center !important; margin-bottom: 15px; text-align: center; }
+.timeline-content { width: 90%; margin: 0 auto; }
+.timeline-content::before { display: none; }
+.year-nav-fixed {
+position: relative;
+width: 100%;
+flex-direction: row;
+justify-content: space-around;
+border-right: none;
+border-bottom: 3px solid #FA4616; /* UF оранжевий */
+top: 0;
+padding: 10px 0;
+background: #fff;
+}
+.year-nav-fixed a { flex: 1; margin: 0 5px; }
+}
+
+/* --- Research cards --- */
+.research-card {
+background: #fefefe;
+border: 2px solid #FA4616; /* UF оранжевий */
+border-left: 8px solid #FA4616; /* UF оранжевий */
+padding: 20px;
+margin: 25px 0;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.research-card h3 {
+margin-top: 0;
+color: #FA4616; /* UF оранжевий */
+font-size: 1.3rem;
+margin-bottom: 12px;
+}
+
+.research-card p, .research-card ul li {
+margin: 10px 0;
+line-height: 1.6;
+}
+	
